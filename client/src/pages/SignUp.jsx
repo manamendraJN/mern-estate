@@ -19,7 +19,7 @@ export default function SignUp() {
           Have an account?
         </p>
         <Link to={"/sign-in"}>
-        <span className='text-blue-700'>Sign in</span>
+        <span className='text-blue-800'>Sign in</span>
         </Link>
       </div>
     </div>
