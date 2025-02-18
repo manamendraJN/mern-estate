@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 export default function SignUp() {
   const [formData, setFormData] = useState({
@@ -43,6 +46,11 @@ export default function SignUp() {
       setError(null);
       setLoading(false);
       navigate('/sign-in'); 
+
+      toast.success("User created successfully!", {
+        position: "top-right",
+        autoClose: 2000, // Closes after 2 seconds
+      });
 
       // setTimeout(() => {
       //   window.location.reload();
